@@ -1,0 +1,58 @@
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1 {
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 40px;
+      text-align: center;
+      color: aliceblue;
+      width: 100%;
+    }
+
+    body {
+      text-align: center;
+      color: #ffffff;
+      font-size: 20px;
+      height: 100vh;
+      background: linear-gradient(rgb(18, 18, 19), #666, #777);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Abra o inspecionar Clicando na tecla f12, e veja o console</h1>
+  <script>
+
+    let base = 3.5;
+    let altura = 1.6;
+
+    let area = base * altura;
+
+    let volumeCerto = area * 100;
+
+   let volumeErrado = volumeCerto - 0.06;
+    
+   let diferenca = volumeErrado / volumeCerto;
+
+
+
+    document.write(`A piscina cabe ${volumeCerto} litros de agua. <br>`)
+    document.write(`e o software identificou que cabe ${volumeErrado} litros de agua. <br>`)
+    document.write(`A diferença foi de ${diferenca} litros.`)
+
+
+
+
+
+  </script>
+</body>
+
+</html>
