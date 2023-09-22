@@ -1,0 +1,56 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            text-align: center;
+            color: aliceblue;
+            width: 100%;
+        }
+
+        body {
+            text-align: center;
+            color: #ffffff;
+            font-size: 20px;
+            height: 100vh;
+            background: linear-gradient(rgb(18, 18, 19), #666, #777);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Abra o inspecionar Clicando na tecla f12, e veja o console</h1>
+    <script>
+   
+      let anoNascimento;
+      let idade;
+  
+      anoNascimento = prompt("Digite seu ano de nascimento")
+      idade = 2023 - anoNascimento;
+      
+      if (idade < 16){
+        document.write(`Você tem ${idade} anos. e o seu voto é Proibido`)
+      }
+      else if( idade >= 16 && idade < 18 || idade >=70 ){
+        document.write(`Você tem ${idade} anos. e o seu voto é Opcional`)
+      }
+      else{
+        document.write(`Você tem ${idade} anos. e o seu voto é Obrigatorio`)
+      }
+
+
+
+
+    </script>
+</body>
+
+</html>
