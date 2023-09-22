@@ -1,0 +1,46 @@
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1 {
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 40px;
+      text-align: center;
+      color: aliceblue;
+      width: 100%;
+    }
+
+    body {
+      text-align: center;
+      color: #ffffff;
+      font-size: 20px;
+      background: linear-gradient(rgb(18, 18, 19), #666, #777);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Abra o inspecionar Clicando na tecla f12, e veja o console</h1>
+
+  <script>
+    let pessoa = [
+      "João",
+      20,
+      "472324343",
+      180,
+      true,
+    ]
+
+    document.write(`${pessoa[0]} tem ${pessoa[1]} anos. o seu cpf é ${pessoa[2]} e a sua altura é ${pessoa[3]} cm.`)
+    console.log(pessoa)
+  </script>
+</body>
+
+</html>
