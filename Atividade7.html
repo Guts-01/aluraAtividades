@@ -1,0 +1,61 @@
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1 {
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 40px;
+      text-align: center;
+      color: aliceblue;
+      width: 100%;
+    }
+
+    body {
+      text-align: center;
+      color: #ffffff;
+      font-size: 20px;
+      background: linear-gradient(rgb(18, 18, 19), #666, #777);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Abra o inspecionar Clicando na tecla f12, e veja o console</h1>
+
+  <script>
+
+   // letra a 
+    document.write(" <h1> LETRA A </h1> <br>")
+let cc = "Impar"
+    for(let cont = 1; cont <= 50; cont++){
+        document.write(`O numero ${cont} é ${cc} <br>`)
+      if ( cont %  2 == 0 ){
+          cc = "Impar"
+      }
+      else{
+        cc = "Par"
+      }
+  
+    }
+    document.write(" <h1> LETRA B </h1> <br>")
+
+    for(let cont2 = 3; cont2 < 100; cont2 += 3){
+      document.write(` | [ ${cont2} ]   `)
+    }
+
+    document.write(" <h1> LETRA C </h1> <br>")
+
+    for(let cont3 = 100; cont3 >= 0; cont3 -= 2){
+       document.write(` | [ ${cont3} ]   `)
+    }
+  </script>
+</body>
+
+</html>
