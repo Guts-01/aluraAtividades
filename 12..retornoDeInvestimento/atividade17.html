@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let investimento = parseFloat(prompt("Digite aqui o valor que queira investir"));
+        let rendimento = 0;
+        let planos = "";
+        let valorInvestimento = 0;
+
+        
+        
+        
+        
+        function investimentoDoCliente() {
+            if (investimento >= 1 && investimento < 100) {
+                rendimento = 1.2;
+                valorInvestimento = investimento * ( 1 + rendimento) ** 1;
+                alert(`Você pode retirar esse valor a qualquer momento e o seu rendimento é de ${rendimento}% e o seu dinhero sera ${valorInvestimento.toFixed(2)} `)
+            }
+            else if (investimento >= 100 && investimento < 500) {
+                rendimento = 1.78;
+                planos = "Plus"
+                valorInvestimento = investimento * ( 1 + rendimento) ** 1;
+                alert(`Você agora obtem o plano ${planos} e só poderar retirar após 30 dias e  seu rendimento é de ${rendimento}% e o seu dinhero sera ${valorInvestimento.toFixed(2)}`)
+
+            }
+            else if (investimento >= 500) {
+                planos = "Pro";
+                let meses = prompt(`Informe quantos meses você ira manter o plano "${planos}"(Minimo de 6 meses)`);
+                if (meses > 6 && meses <= 11) {
+                    rendimento = meses / 2.6;
+                }
+                if (meses == 6) {
+                    rendimento = 2.6
+                }
+                if (meses == 12) {
+                    rendimento = 4.4;
+                }
+
+                valorInvestimento = investimento * ( 1 + rendimento) ** meses;   
+
+                alert(`Você agora obtem o plano ${planos} e a taxa de rendimento è de ${rendimento.toFixed(2)}%, mas varia de acordo os meses, mas se você deixar por um ano, irá render 4,4%  ao mes do valor depositado. e o seu dinhero sera ${valorInvestimento}`)
+            }
+        };
+        
+        
+        
+        
+        investimentoDoCliente();
+    
+
+
+    </script>
+</body>
+
+</html>
