@@ -1,0 +1,92 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        let cliente = {
+            // dataDeNascimento: prompt("Qual a sua data de nascimento? (DD/MM/AAAA)"),
+            NumeroDoCPF: " ",
+            // NomeCompleto: prompt("Digite o seu nome completo:"),
+            email: " ",
+            celular: " ",
+            telefone: " ",
+            // endereco: {
+            //     Rua: prompt("Digite o nome da sua rua"),
+            //     Bairro: prompt("Digite o seu bairro"),
+            //     numeroDaCasa: prompt("Digite o número em que reside"),
+            // },
+            // residencial: {
+            //     cidade:prompt("Em que cidade você mora?"),
+            //     estado: prompt("Em que estado você mora?"),
+            // },
+            // profissao:{ 
+            //     cargo:prompt("Qual sua peofissão??"),
+            //     salario:prompt("Qual o seu salario?"),
+            // },
+            // senha:prompt("Agora digite quatro numeros para a criação da sua senha (não poderá repetir numeros e não poderá ser uma sequência)"),
+
+        }
+
+        function verificacao() {
+
+            cliente.NumeroDoCPF =prompt("Qual o seu CPF? (xxx.xxx.xxx-xx)");
+            
+            while (cliente.NumeroDoCPF.length < 11 || cliente.NumeroDoCPF.length > 11 || cliente.NumeroDoCPF == "") {
+                alert("Verificamos aqui e seu CPF parece ser um número inválido. Tente novamente.")
+                cliente.NumeroDoCPF =prompt("Qual o seu CPF? (xxx.xxx.xxx-xx)");
+            }
+            if(cliente.NumeroDoCPF.length == 11){
+                alert("Tudo certo! Vamos prosseguir.");
+
+                cliente.email = prompt("Digite seu email: (ex: seuEmailAqui@gmail.com)");
+                
+                while ( cliente.email == "" || !cliente.email.includes("@")) {
+                    alert("Ops! Tem certeza que esse e-mail está correto? Tente novamente.");
+                    cliente.email = prompt("Digite seu email: ( Certifique-se de incluir '@')");
+                }
+
+                if (cliente.email.includes("@")) {
+
+                    alert("Tudo certo! Vamos prosseguir.")
+
+                    cliente.celular = prompt("Digite seu número para contato");
+
+                    while (cliente.celular == "") {
+                        alert("Não deixem o campo em branco!!")
+                        cliente.celular = prompt("Digite seu número de celular novamente (Obrigatório conter números)");
+                    }
+
+
+                    cliente.telefone = prompt("Digite  numero de telefone Residencial (Opcional)");
+
+
+                    if (cliente.telefone == "") {
+                        cliente.telefone = "Não informado"
+                    }
+                    document.write(`CPF:  ${cliente.NumeroDoCPF} <br>`)
+                    document.write(`Email:  ${cliente.email} <br>`)
+                    document.write(`Telefone:  ${cliente.telefone} <br>`)
+                    document.write(`Celular:  ${cliente.celular} <br>`)
+
+                }
+
+
+
+            }
+        }
+
+        verificacao();
+
+    </script>
+</body>
+
+</html>
