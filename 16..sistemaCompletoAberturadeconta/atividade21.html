@@ -1,0 +1,47 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+
+        let salario = prompt("Nós informe o seu salario aqui.");
+        let desconto = 0;
+        let porcentagem; 
+
+        if(salario > 1000 && salario < 3000){
+            desconto = 20
+            porcentagem = (salario / 100) * desconto; 
+            alert(
+                `oferecemos um cartão de crédito com um limite inicial de R$ ${parseInt(porcentagem)} `
+            )
+        }
+        if(salario > 3000 && salario < 5000){
+            desconto = 28;
+            porcentagem = (salario / 100) * desconto; 
+            alert(
+                `oferecemos um cartão de crédito com um limite inicial de R$ ${parseInt(porcentagem)} `
+            )
+        }
+        if(salario > 5000){
+            desconto = 31
+            porcentagem = (salario / 100) * desconto; 
+            alert(
+                `oferecemos um cartão de crédito com um limite inicial de R$ ${parseInt(porcentagem)} `
+            )
+        }
+
+
+
+    </script>
+</body>
+
+</html>

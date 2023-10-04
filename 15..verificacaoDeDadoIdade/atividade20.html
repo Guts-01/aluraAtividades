@@ -1,0 +1,74 @@
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+     let idade = parseInt(prompt("Digite sua idade"));
+        let senha;
+        let senhaCorreta = '';
+        let repetidos = [1234, 2345, 3456, 4567, 5678, 6789,9123];
+        let igual = [1111, 2222, 3333, 4444, 5555, 6666, 7777, 8888, 9999, "0000"];
+
+
+
+        function verificacaoIdade() {
+             if (idade < 18) {
+                 let tempoDeConta = 18 - idade;
+               alert(`Ops! Você ainda não tem a idade mínima para abrir uma conta conosco. Daqui ${tempoDeConta} anos você poderá tentar novamente`);
+             }
+            else {
+                alert("Verificamos aqui e você pode abrir a sua conta conosco, clique em ok para prosseguir");
+
+            senhaCorreta = prompt("Crie uma senha de 4 digitos para você.( Sem numeros repetidos ou em sequencia)");
+
+            while (senhaCorreta == "") {
+                alert("nao deixe em branco");
+                senhaCorreta = prompt("Crie uma senha de 4 digitos para você.( Sem numeros repetidos ou em sequencia)");
+            };
+
+            while (senhaCorreta == repetidos[0] || senhaCorreta == repetidos[1] || senhaCorreta == repetidos[2] || senhaCorreta == repetidos[3] || senhaCorreta == repetidos[4] || senhaCorreta == repetidos[5]|| senhaCorreta == repetidos[6]) {
+                alert("Nao use senha sequencial")
+                senhaCorreta = prompt("Crie uma senha de 4 digitos para você.( Sem numeros repetidos ou em sequencia)");
+            };
+
+            while (senhaCorreta == igual[0] || senhaCorreta == igual[1] || senhaCorreta == igual[2] || senhaCorreta == igual[3] || senhaCorreta == igual[4] || senhaCorreta == igual[5] || senhaCorreta == igual[6] || senhaCorreta == igual[7] || senhaCorreta == igual[8] || senhaCorreta == igual[9]) {
+                alert("Nao use senha de numero repetido")
+                senhaCorreta = prompt("Crie uma senha de 4 digitos para você.( Sem numeros repetidos ou em sequencia)");
+            }
+
+
+
+
+
+            alert("Sua senha esta criada, no proximo passo tente inseri-la corretamente")
+
+            senha = parseInt(prompt("Agora digite a sua senha:"));
+
+            while (senha != senhaCorreta) {
+                alert("Senha inválida, certifique-se de ter colocado corretamente a sua senha");
+                senha = prompt("Senha invalida!! Digite novamente a sua senha correta")
+            }
+
+            document.write(`Bem vindo a sua conta nubanco <br>`)
+            document.write(`sua senha é: ${senha} <br>`)
+            document.write(`sua idade é: ${idade} anos  <br>`)
+
+        }
+    };
+
+
+
+
+        verificacaoIdade();
+    </script>
+</body>
+
+</html>
